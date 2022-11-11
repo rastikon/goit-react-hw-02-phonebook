@@ -3,9 +3,9 @@ import React from 'react';
 
 const ContactsList = ({ contacts, onRemove }) => (
   <ul>
-    {contacts.map(({ id, name, phone }) => (
+    {contacts.map(({ id, name, number }) => (
       <li key={id}>
-        {name} : {phone}
+        {name} : {number}
         <button onClick={() => onRemove(id)}>Delete</button>
       </li>
     ))}

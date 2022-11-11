@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import Form from '../Form/Form';
+import 'components/App/App.css';
 import ContactsList from '../ContactList';
 import Filter from 'components/Filter';
 
@@ -49,7 +50,7 @@ export default class App extends Component {
     const { filter } = this.state;
     const visibleContacts = this.getVisibleContacts();
     return (
-      <div>
+      <div className="form">
         <h2>Phonebook</h2>
         <Form
           onAdd={this.handleAddContact}
