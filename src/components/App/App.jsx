@@ -24,7 +24,7 @@ export default class App extends Component {
   // Перевіряє унікальність контакту
   handleCheckUniqueContact = name => {
     const { contacts } = this.state;
-    const isExistContact = !!contacts.find(contact => contact.name === name); //Якщо однакові імена поверне true, якщо ні - false
+    const isExistContact = !contacts.find(contact => contact.name === name); //Якщо однакові імена поверне true, якщо ні - false
     isExistContact && alert('Contact is already exist');
     return !isExistContact;
   };
